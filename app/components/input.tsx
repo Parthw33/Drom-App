@@ -1,4 +1,4 @@
-'use client';
+'use cilent'
 
 import clsx from 'clsx';
 import { type } from 'os';
@@ -22,7 +22,6 @@ const Input : React.FC<InputProps>  = ({
     label,
     id,
     type,
-    register,
     required,
     errors,
     disabled
@@ -40,18 +39,12 @@ const Input : React.FC<InputProps>  = ({
             >
                 {label}
             </label>
-            <div className='mt-2'>
+            <div
+            className='mt-2'>
                 <input 
-                    id={id}
-                    type={type}
-                    autoComplete={id}
-                    disabled={disabled}
-                    {...register(id, {required})}
-                    className={clsx(`
-                        form-input
-                        
-                    `)}
+                    type={type} 
                 />
+
             </div>
         </div>
     );
